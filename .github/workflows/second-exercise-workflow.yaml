@@ -8,14 +8,14 @@ jobs:
       - name: bash
         shell: bash
         run: uname -a
-      - name: asdf
+      - name: power shell
         shell: pwsh
         run: Get-ComputerInfo
-      - name: asdf
+      - name: python
         shell: python
         run: |
           import sys
           print(sys.version)
-      - name: asdf
-        shell: node
+      - name: node
+        shell: node {0}
         run: console.log(process.version)
