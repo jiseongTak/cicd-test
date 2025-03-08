@@ -1,0 +1,21 @@
+name: second exercise workflow
+on: [push]
+
+jobs:
+  print-info:
+    runs-on: windows-latest
+    steps:
+      - name: bash
+        shell: bash
+        run: uname -a
+      - name: asdf
+        shell: pwsh
+        run: Get-ComputerInfo
+      - name: asdf
+        shell: python
+        run: |
+          import sys
+          print(sys.version)
+      - name: asdf
+        shell: node
+        run: console.log(process.version)
