@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: python version
-        run: |
-          python --version
-          pip --version
+        run: python --version
+      - name: pip version
+        run: pip --version
