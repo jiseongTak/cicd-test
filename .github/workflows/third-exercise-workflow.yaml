@@ -1,0 +1,15 @@
+name: third-exercise-workflow
+on: [push]
+
+jobs:
+  exercise-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: make-folder
+        run: |
+          mkdir -p /home/runner/test_folder
+      - name: Create sample.txt inside test_folder
+        run: echo "Hello, GitHub Actions!" > /home/runner/test_folder/sample.txt
+      - name: Read sample.txt using working-directory
+        working-directory: /home/runner/test_folder
+        run: cat sample.txt
