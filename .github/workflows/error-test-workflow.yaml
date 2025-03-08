@@ -4,6 +4,8 @@ on: [push]
 jobs:
   testing-wf-commands:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_STEP_DEBUG: true
     steps:
       - name: Setting an error message
         run: echo "::error::Missing semicolon"
